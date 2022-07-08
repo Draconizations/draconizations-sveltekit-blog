@@ -1,0 +1,154 @@
+{
+  "output/runtime/client/start.js": {
+    "file": "start-74a17376.js",
+    "src": "output/runtime/client/start.js",
+    "isEntry": true,
+    "imports": [
+      "_index-01d1497b.js",
+      "_index-b63fab89.js"
+    ],
+    "dynamicImports": [
+      "src/routes/__layout.svelte",
+      "output/runtime/components/error.svelte",
+      "src/routes/pages/__layout.svelte",
+      "src/routes/index.svelte",
+      "src/routes/pages/about.md",
+      "src/routes/pages/contact.md",
+      "src/routes/posts/[post].svelte",
+      "src/routes/posts/index.svelte",
+      "src/routes/posts/tag/[tag].svelte",
+      "src/routes/posts/tag/index.svelte"
+    ]
+  },
+  "src/routes/__layout.svelte": {
+    "file": "pages/__layout.svelte-c7009fc9.js",
+    "src": "src/routes/__layout.svelte",
+    "isEntry": true,
+    "isDynamicEntry": true,
+    "imports": [
+      "_index-01d1497b.js",
+      "_index-b63fab89.js"
+    ],
+    "css": [
+      "assets/pages/__layout.svelte-4d3fc920.css"
+    ]
+  },
+  "output/runtime/components/error.svelte": {
+    "file": "error.svelte-98369d83.js",
+    "src": "output/runtime/components/error.svelte",
+    "isEntry": true,
+    "isDynamicEntry": true,
+    "imports": [
+      "_index-01d1497b.js"
+    ]
+  },
+  "src/routes/pages/__layout.svelte": {
+    "file": "pages/pages/__layout.svelte-9692f906.js",
+    "src": "src/routes/pages/__layout.svelte",
+    "isEntry": true,
+    "isDynamicEntry": true,
+    "imports": [
+      "_index-01d1497b.js"
+    ]
+  },
+  "src/routes/index.svelte": {
+    "file": "pages/index.svelte-4b089872.js",
+    "src": "src/routes/index.svelte",
+    "isEntry": true,
+    "isDynamicEntry": true,
+    "imports": [
+      "_index-01d1497b.js"
+    ],
+    "css": [
+      "assets/pages/index.svelte-aebf03c7.css"
+    ],
+    "assets": [
+      "assets/ANOMALY-48171cfb.png"
+    ]
+  },
+  "src/routes/pages/about.md": {
+    "file": "pages/pages/about.md-c01acf8a.js",
+    "src": "src/routes/pages/about.md",
+    "isEntry": true,
+    "isDynamicEntry": true,
+    "imports": [
+      "_index-01d1497b.js"
+    ]
+  },
+  "src/routes/pages/contact.md": {
+    "file": "pages/pages/contact.md-9f627165.js",
+    "src": "src/routes/pages/contact.md",
+    "isEntry": true,
+    "isDynamicEntry": true,
+    "imports": [
+      "_index-01d1497b.js"
+    ]
+  },
+  "src/routes/posts/[post].svelte": {
+    "file": "pages/posts/_post_.svelte-56d990c7.js",
+    "src": "src/routes/posts/[post].svelte",
+    "isEntry": true,
+    "isDynamicEntry": true,
+    "imports": [
+      "_index-01d1497b.js",
+      "_tag-39b8d5dd.js"
+    ],
+    "css": [
+      "assets/pages/posts/_post_.svelte-7f8142b9.css"
+    ]
+  },
+  "src/routes/posts/index.svelte": {
+    "file": "pages/posts/index.svelte-e48df16e.js",
+    "src": "src/routes/posts/index.svelte",
+    "isEntry": true,
+    "isDynamicEntry": true,
+    "imports": [
+      "_index-01d1497b.js",
+      "_Pagination-2b317c91.js"
+    ]
+  },
+  "src/routes/posts/tag/[tag].svelte": {
+    "file": "pages/posts/tag/_tag_.svelte-b96fbf29.js",
+    "src": "src/routes/posts/tag/[tag].svelte",
+    "isEntry": true,
+    "isDynamicEntry": true,
+    "imports": [
+      "_index-01d1497b.js",
+      "_Pagination-2b317c91.js"
+    ]
+  },
+  "src/routes/posts/tag/index.svelte": {
+    "file": "pages/posts/tag/index.svelte-117b20e9.js",
+    "src": "src/routes/posts/tag/index.svelte",
+    "isEntry": true,
+    "isDynamicEntry": true,
+    "imports": [
+      "_index-01d1497b.js",
+      "_tag-39b8d5dd.js"
+    ]
+  },
+  "_index-01d1497b.js": {
+    "file": "chunks/index-01d1497b.js"
+  },
+  "_index-b63fab89.js": {
+    "file": "chunks/index-b63fab89.js",
+    "imports": [
+      "_index-01d1497b.js"
+    ]
+  },
+  "_tag-39b8d5dd.js": {
+    "file": "chunks/tag-39b8d5dd.js",
+    "imports": [
+      "_index-01d1497b.js"
+    ]
+  },
+  "_Pagination-2b317c91.js": {
+    "file": "chunks/Pagination-2b317c91.js",
+    "imports": [
+      "_index-01d1497b.js"
+    ],
+    "css": [
+      "assets/Pagination-380cdb74.css"
+    ]
+  }
+}
