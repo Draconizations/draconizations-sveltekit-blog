@@ -1,0 +1,90 @@
+$dropshadow: 8px 8px 0px 0px;
+
+$black: #000000;
+$red: #ff4043;
+$orange: #ff732d;
+$peachy: #ff9c63;
+$yellow: #ffff31;
+$lime: #a0ff41;
+$green: #3ad96f;
+$teal: #1ac7c4;
+$sky: #66a7ff;
+$blue: #2574ff;
+$purple: #b656fd;
+$magenta: #f034c7;
+$pink: #ff83b3;
+$white: #ffffff;
+
+@mixin change-color($color) {
+    .dropshadow {
+        box-shadow: $dropshadow $color;
+    }
+
+    a {
+        color: $color;
+    }
+
+    .tag-text {
+        background-color: $color;
+    }
+
+    select {
+        background: $color;
+    }
+}
+
+.drgn-black {
+    @include change-color($black);
+}
+
+.drgn-red {
+    @include change-color($red);
+}
+
+.drgn-orange {
+    @include change-color($orange);
+}
+
+.drgn-peachy {
+    @include change-color($peachy);
+}
+
+.drgn-yellow {
+    @include change-color($yellow);
+}
+
+.drgn-lime {
+    @include change-color($lime);
+}
+
+.drgn-green {
+    @include change-color($green);
+}
+
+.drgn-teal {
+    @include change-color($teal);
+}
+
+.drgn-sky {
+    @include change-color($sky);
+}
+
+.drgn-blue {
+    @include change-color($blue);
+}
+
+.drgn-purple {
+    @include change-color($purple);
+}
+
+.drgn-magenta {
+    @include change-color($magenta);
+}
+
+.drgn-pink {
+    @include change-color($pink);
+}
+
+.drgn-white {
+    @include change-color($white);
+}

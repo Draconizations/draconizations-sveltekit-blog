@@ -1,0 +1,83 @@
+$themes: (
+    light: (
+        bg-color: #ffffff,
+        text-color: #000000,
+        border-color: #000000,
+    ),
+    dark: (
+        bg-color: #000000,
+        text-color: #ffffff,
+        border-color: #ffffff,
+    ),
+    faded: (
+        bg-color: #3d3f45,
+        text-color: #faf9fb,
+        border-color: #c1bdd0,
+    )
+);
+
+$border-block: 1px solid;
+
+@mixin themify($theme) {
+    $bg-color:  map-get($themes, $theme, bg-color);
+    $text-color: map-get($themes, $theme, text-color);
+    $border-color: map-get($themes, $theme, border-color);
+
+    .block {
+        border: $border-block $border-color;
+        background-color: $bg-color;
+    }
+    hr {
+        border: none;
+        border-top: $border-block $border-color;
+        width: 100%;
+    }
+
+    .title {
+        color: $text-color;
+    }
+
+    select, .tag-text {
+        color: $bg-color;
+    }
+
+    .tag-text:hover {
+        background-color: $text-color;
+        text-decoration: none;
+    }
+
+    .thumbnail {
+        border: $border-block $border-color;
+    }
+
+    .normal {
+        color: $text-color;
+    }
+}
+
+.theme-wrapper.drgn-dark {
+    background-color: map-get($themes, dark, bg-color);
+    color: map-get($themes, dark, text-color);
+}
+
+.theme-wrapper.drgn-light {
+    background-color: map-get($themes, light, bg-color);
+    color: map-get($themes, light, text-color);
+}
+
+.theme-wrapper.drgn-faded {
+    background-color: map-get($themes, faded, bg-color);
+    color: map-get($themes, faded, text-color);
+}
+
+.drgn-light {
+    @include themify(light);
+}
+
+.drgn-dark {
+    @include themify(dark);
+}
+
+.drgn-faded {
+    @include themify(faded);
+}

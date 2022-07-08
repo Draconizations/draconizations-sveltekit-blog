@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap');
+
+$default-padding: 1rem;
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+}
+
+#sveltekit-body {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    min-height: 100vh;
+    font-family: "Roboto Mono", 'Courier New', monospace;
+    flex: 1;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    gap: 1.5rem;
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+h1, h2, h3, h4 {
+    margin-top: 0.5rem;
+}
+
+select {
+    border: none;
+    padding: 0.25rem 0.5rem;
+    font-family: "Roboto Mono", 'Courier New', monospace;
+}
+
+.theme-wrapper {
+    display: flex;
+    flex-direction: row;
+    flex: 1;
+    width: 100%;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    margin: 2.5rem calc(1.5rem + 8px) 2.5rem 1.5rem;
+    width: 100%;
+    gap: 1rem;
+}
+
+.block {
+    padding: $default-padding;
+}
+
+.title {
+    font-weight: bold;
+}
+
+.gapped {
+    gap: 2.5rem;
+}
+
+.margins {
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.margin-top {
+    margin-top: 1.5rem; 
+}
+
+.center {
+    text-align: center;
+}
+
+.italic {
+    font-style: italic;
+}
+
+.tags {
+    list-style-type: none;
+    margin: 1rem 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+}
+
+.tag-text {
+    display: block;
+    padding: 0.25rem 0.5rem;
+}
+
+.thumbnail {
+    object-fit: cover;
+    max-width: 200px;
+    height: 200px;
+}
+
+.margin-center {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.d-block {
+    display: block;
+}
+
+@media (min-width: 900px) {
+    .container {
+        width: 70%;
+        max-width: 750px;
+        margin: 2.5rem auto;
+    }
+}
+
+@media (min-width: 1200px) {
+    .container {
+        width: 69%;
+        max-width: 900px;
+    }
+}
