@@ -37,8 +37,12 @@ $border-block: 1px solid;
         color: $text-color;
     }
 
-    select, .tag-text {
+    select, button, .tag-text {
         color: $bg-color;
+    }
+
+    button:hover {
+        background-color: $text-color;
     }
 
     .tag-text:hover {
