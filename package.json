@@ -1,6 +1,7 @@
 {
 	"name": "draconizations",
 	"version": "0.0.1",
+	"homepage": "https://draconizations.github.io/draconizations-sveltekit-blog",
 	"scripts": {
 		"dev": "vite dev",
 		"build": "vite build",
@@ -9,7 +10,8 @@
 		"prepare": "svelte-kit sync",
 		"check": "svelte-check --tsconfig ./tsconfig.json",
 		"check:watch": "svelte-check --tsconfig ./tsconfig.json --watch",
-		"deploy": "npm run build && node ./gh-pages.js"
+		"predeploy": "npm run build",
+		"deploy": "gh-pages -d build"
 	},
 	"devDependencies": {
 		"@sveltejs/adapter-auto": "next",
