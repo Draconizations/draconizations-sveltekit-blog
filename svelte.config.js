@@ -21,15 +21,10 @@ const config = {
 	extensions: ['.svelte', '.md'],
 
 	kit: {
-		adapter: adapter({
-			pages: 'build',
-			assets: 'build',
-			fallback: null
-		}),
+		adapter: adapter(),
 		prerender: {
 			default: true
 		}
 	}
-};
-
+}
 export default config;
