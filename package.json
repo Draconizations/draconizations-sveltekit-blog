@@ -8,7 +8,8 @@
 		"preview": "vite preview",
 		"prepare": "svelte-kit sync",
 		"check": "svelte-check --tsconfig ./tsconfig.json",
-		"check:watch": "svelte-check --tsconfig ./tsconfig.json --watch"
+		"check:watch": "svelte-check --tsconfig ./tsconfig.json --watch",
+		"deploy": "npm run build && node ./gh-pages.js"
 	},
 	"devDependencies": {
 		"@sveltejs/adapter-auto": "next",
@@ -24,6 +25,7 @@
 	"dependencies": {
 		"@sveltejs/adapter-static": "^1.0.0-next.34",
 		"autoprefixer": "^10.4.7",
+		"gh-pages": "^4.0.0",
 		"mdsvex": "^0.10.6",
 		"sass": "^1.53.0"
 	}
