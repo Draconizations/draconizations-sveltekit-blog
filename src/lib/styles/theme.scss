@@ -53,6 +53,11 @@ $border-block: 1px solid;
     .normal {
         color: $text-color;
     }
+
+    code {
+        color: $bg-color;
+        background-color: $text-color;
+    }
 }
 
 .theme-wrapper.drgn-dark {
