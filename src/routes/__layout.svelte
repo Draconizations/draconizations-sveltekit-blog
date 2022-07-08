@@ -16,7 +16,7 @@
 
 <div class={`theme-wrapper ${currentTheme} drgn-${currentAccentColor}`}>
     <div class="container">
-        <Header>Draconizations</Header>
+        <Header>Fulmine</Header>
 
         <main>
             <slot/>
