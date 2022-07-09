@@ -1,25 +1,24 @@
 <script lang="ts">
-import { prevent_default } from "svelte/internal";
-
+    export let path: string;
     export let currentPage: number;
     export let amountOfPages: number;
 </script>
 
 {#if amountOfPages > 1}
 <div class="margin-top">
-    <a href="#" class="normal" on:click={(e) => {e.preventDefault; currentPage = 1}}>first</a> /
+    <a href={`${path}/1`} class="normal">first</a> /
     {#if currentPage !== 1}
-        <a href="#" class="normal" on:click={(e) => {e.preventDefault; currentPage = currentPage - 1}}>prev</a>
+        <a href={`${path}/${currentPage - 1}`} class="normal">prev</a>
     {:else}
         ....
     {/if}
     /
     {#if currentPage !== amountOfPages}
-        <a href="#" class="normal" on:click={(e) => {e.preventDefault; currentPage = currentPage + 1}}>next</a>
+        <a href={`${path}/${currentPage + 1}`} class="normal">next</a>
     {:else}
     ...
     {/if}
-    / <a href="#" class="normal" on:click={(e) => {e.preventDefault; currentPage = amountOfPages}}>last</a>
+    / <a href={`${path}/${amountOfPages}`} class="normal">last</a>
 </div>
 {/if}
 

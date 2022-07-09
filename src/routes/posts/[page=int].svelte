@@ -14,12 +14,11 @@
 
 <script lang="ts">
     import { page } from '$app/stores';
+    import ShortPost from '$lib/components/ShortPost.svelte';
     import Pagination from '$lib/components/Pagination.svelte';
     import { itemsPerPage } from '$lib/utils/postUtils';
 
     import PageList from '$lib/components/PageList.svelte';
-    
-    export let posts: any;
 
     let currentPage: number;
     let path = '/posts';
@@ -30,6 +29,8 @@
     } else {
       currentPage = 1;
     }
+
+    export let posts: any;
 
     $: indexOfLastItem = currentPage * itemsPerPage;
     $: indexOfFirstItem = indexOfLastItem - itemsPerPage;

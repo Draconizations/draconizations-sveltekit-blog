@@ -12,3 +12,5 @@ export function trimPostContent(post: any) {
 
   return trimmedContent;
 }
+
+export const itemsPerPage: number = 5;

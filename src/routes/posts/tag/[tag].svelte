@@ -17,40 +17,34 @@
 </script>
 
 <script lang="ts">
-  import ShortPost from '$lib/components/ShortPost.svelte';
+  import { page } from '$app/stores';
+  import PageList from '$lib/components/PageList.svelte';
   import Pagination from '$lib/components/Pagination.svelte';
+  import { itemsPerPage } from '$lib/utils/postUtils';
 
   export let posts: any;
   export let tag: string;
 
+  $: pathSegments = $page.url.pathname.split("/");
+
+  $: path = "/posts/tag/" + pathSegments[pathSegments.length - 1];
+
   let currentPage = 1;
-  const itemsPerpage = 5;
 
-  $: indexOfLastItem = currentPage * itemsPerpage;
-  $: indexOfFirstItem = indexOfLastItem - itemsPerpage;
+  $: indexOfLastItem = currentPage * itemsPerPage;
+  $: indexOfFirstItem = indexOfLastItem - itemsPerPage;
 
-  $: amountOfPages = Math.ceil(posts.length / itemsPerpage);
+  $: amountOfPages = Math.ceil(posts.length / itemsPerPage);
 
   $: slicedList = posts.slice(indexOfFirstItem, indexOfLastItem);
 </script>
 
-{#if posts.length}
-  <section class="center">
-    <h2>Posts tagged #{tag}</h2>
+<section class="center">
+  <h2>Posts tagged #{tag}</h2>
 
-    <a href="/posts">Back to all posts</a>
-
-    <Pagination bind:currentPage {amountOfPages}/>
-  </section>
-
-  <section class="gapped">
-    {#each slicedList as post, index}
-      <ShortPost {post} />
-    {/each}
-  </section>
-{:else}
-<section class="center margin-top">
-  <h2>There are no posts tagged as #{tag}!</h2>
   <a href="/posts/tag">Back to tag catalog</a>
+
+  <Pagination {currentPage} {amountOfPages} {path}/>
 </section>
-{/if}
+
+<PageList posts={slicedList} />
