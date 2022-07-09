@@ -14,7 +14,7 @@
     $: currentAccentColor = $accent;
 </script>
 
-<div class={`theme-wrapper ${currentTheme} drgn-${currentAccentColor}`}>
+<div class={`theme-wrapper drgn-${currentTheme} drgn-${currentAccentColor}`}>
     <div class="container">
         <Header>Fulmine</Header>
 

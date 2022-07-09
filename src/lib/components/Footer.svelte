@@ -5,73 +5,59 @@
     let selectedTheme: string;
     let selectedAccentColor: string;
 
+    let themeEmojis = {
+        light: "☀️",
+        dark: "🌙",
+        faded: "✨"
+    }
+
+    let accentEmojis = {
+        black: "🌑🐈‍⬛",
+        red: "🩸🍒",
+        orange: "🔥🧨",
+        peachy: "🍑🏵️",
+        yellow: "🍋🌻",
+        lime: "🌱🏔️",
+        green: "🐉🌲",
+        teal: "💎🐬",
+        sky: "🌧️💙",
+        blue: "🌀🫐",
+        purple: "🍇🔮",
+        magenta: "🍷🌺",
+        pink: "🌷🏳️‍⚧️",
+        white: "🤍🍸"
+    }
+
     const changeTheme = () => theme.set(selectedTheme);
 
     const changeAccentColor = () => accent.set(selectedAccentColor);
 
     $: switchFooterEmojis($accent);
 
-    let emojis = "🐉✨";
+    let currentAccentEmoji = "🐉✨";
 
     function switchFooterEmojis(accent: string) {
-        switch (accent) {
-            case "black": emojis = "🌑🐈‍⬛";
-            break;
-            case "red": emojis = "🩸🍒";
-            break;
-            case "orange": emojis = "🔥🧨";
-            break;
-            case "peachy": emojis = "🍑🏵️";
-            break;
-            case "yellow": emojis = "🍋☀️";
-            break;
-            case "lime": emojis = "🌱🏔️";
-            break;
-            case "green": emojis = "🐉🌲";
-            break;
-            case "teal": emojis = "💎🐬";
-            break;
-            case "sky": emojis = "🌧️💙";
-            break;
-            case "blue": emojis = "🌀🫐";
-            break;
-            case "purple": emojis = "🍇🔮";
-            break;
-            case "magenta": emojis = "🍷🌺";
-            break;
-            case "pink": emojis = "🌷🏳️‍⚧️";
-            break;
-            case "white": emojis = "🤍🍸";
-        }
+        Object.entries(accentEmojis).forEach(([key, value]) => {
+            if (accent === key) currentAccentEmoji = value;
+        });
     }
 
 </script>
 
 <footer>
-    <span>{emojis}</span>
+    <span>{currentAccentEmoji}</span>
 
     <select bind:value={selectedTheme} aria-label="Change theme" on:change={changeTheme}>
-        <option default disabled>theme</option>
-        <option value="drgn-light" >light</option>
-        <option value="drgn-dark" >dark</option>
-        <option value="drgn-faded" >faded</option>
+        <option class="drgn-theme-option-default" default disabled>theme</option>
+        {#each Object.keys(themeEmojis) as theme}
+            <option class={`drgn-theme-option-${theme}`} value={theme}>{theme}</option>
+        {/each}
     </select>
     <select bind:value={selectedAccentColor} aria-label="Change accent color" on:change={changeAccentColor} >
-        <option default disabled>accent</option>
-        <option value="black">black</option>
-        <option value="red" >red</option>
-        <option value="orange">orange</option>
-        <option value="peachy">peachy</option>
-        <option value="yellow">yellow</option>
-        <option value="lime">lime</option>
-        <option value="green">green</option>
-        <option value="teal">teal</option>
-        <option value="sky">sky</option>
-        <option value="blue" >blue</option>
-        <option value="purple">purple</option>
-        <option value="magenta">magenta</option>
-        <option value="pink">pink</option>
-        <option value="white">white</option>
+        <option class="drgn-accent-option-default" default disabled>accent</option>
+        {#each Object.keys(accentEmojis) as accent}
+            <option class={`drgn-accent-option-${accent}`} value={accent}>{accent}</option>
+        {/each}
     </select>
 
     <span>made with <a href="https://kit.svelte.dev/">sveltekit</a></span>

@@ -1,7 +1,7 @@
 import { writable } from "svelte/store"
 import { browser } from "$app/env"
 
-let defaultValue = 'drgn-dark';
+let defaultValue = 'dark';
 const initialValue = browser ? window.localStorage.getItem('drgn-theme') ?? defaultValue : defaultValue;
 
 export const theme = writable<string>(initialValue);

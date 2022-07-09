@@ -1,19 +1,21 @@
 $dropshadow: 8px 8px 0px 0px;
 
-$black: #000000;
-$red: #ff4043;
-$orange: #ff732d;
-$peachy: #ff9c63;
-$yellow: #ffff31;
-$lime: #a0ff41;
-$green: #3ad96f;
-$teal: #1ac7c4;
-$sky: #66a7ff;
-$blue: #2574ff;
-$purple: #b656fd;
-$magenta: #f034c7;
-$pink: #ff83b3;
-$white: #ffffff;
+$colors: (
+    black: #000000,
+    red: #ff4043,
+    orange: #ff732d,
+    peachy: #ff9c63,
+    yellow: #ffff31,
+    lime: #a0ff41,
+    green: #3ad96f,
+    teal: #1ac7c4,
+    sky: #66a7ff,
+    blue: #2574ff,
+    purple: #b656fd,
+    magenta: #ff43c6,
+    pink: #ff83b3,
+    white: #ffffff
+);
 
 @mixin change-color($color) {
     .dropshadow {
@@ -28,63 +30,33 @@ $white: #ffffff;
         background-color: $color;
     }
 
-    select, button {
+    select, button, .tag-text {
         background: $color;
+        @include text-contrast($color);
     }
 }
 
-.drgn-black {
-    @include change-color($black);
-}
+// from this codepen https://codepen.io/davidhalford/pen/ALrbEP
+@mixin text-contrast($n) { 
+    $color-brightness: round((red($n) * 299) + (green($n) * 587) + (blue($n) * 114) / 1000);
+    $light-color: round((red(#ffffff) * 299) + (green(#ffffff) * 587) + (blue(#ffffff) * 114) / 1000);
+    
+    @if abs($color-brightness) < ($light-color/2){
+      color: white;
+    }
+  
+    @else {
+      color: black;
+    }
+  }
 
-.drgn-red {
-    @include change-color($red);
-}
+@each $color, $colorCode in $colors {
+    .drgn-#{$color} {
+        @include change-color($colorCode);
+    }
 
-.drgn-orange {
-    @include change-color($orange);
-}
-
-.drgn-peachy {
-    @include change-color($peachy);
-}
-
-.drgn-yellow {
-    @include change-color($yellow);
-}
-
-.drgn-lime {
-    @include change-color($lime);
-}
-
-.drgn-green {
-    @include change-color($green);
-}
-
-.drgn-teal {
-    @include change-color($teal);
-}
-
-.drgn-sky {
-    @include change-color($sky);
-}
-
-.drgn-blue {
-    @include change-color($blue);
-}
-
-.drgn-purple {
-    @include change-color($purple);
-}
-
-.drgn-magenta {
-    @include change-color($magenta);
-}
-
-.drgn-pink {
-    @include change-color($pink);
-}
-
-.drgn-white {
-    @include change-color($white);
+    .drgn-accent-option-#{$color} {
+        background-color: $colorCode;
+        @include text-contrast($colorCode);
+    }
 }

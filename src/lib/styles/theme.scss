@@ -18,10 +18,10 @@ $themes: (
 
 $border-block: 1px solid;
 
-@mixin themify($theme) {
-    $bg-color:  map-get($themes, $theme, bg-color);
-    $text-color: map-get($themes, $theme, text-color);
-    $border-color: map-get($themes, $theme, border-color);
+@mixin themify($themeName) {
+    $bg-color:  map-get($themeName, bg-color);
+    $text-color: map-get($themeName, text-color);
+    $border-color: map-get($themeName, border-color);
 
     .block {
         border: $border-block $border-color;
@@ -37,16 +37,9 @@ $border-block: 1px solid;
         color: $text-color;
     }
 
-    select, button, .tag-text {
+    .tag-text:hover, button:hover {
+        background-color: $text-color;
         color: $bg-color;
-    }
-
-    button:hover {
-        background-color: $text-color;
-    }
-
-    .tag-text:hover {
-        background-color: $text-color;
         text-decoration: none;
     }
 
@@ -64,29 +57,18 @@ $border-block: 1px solid;
     }
 }
 
-.theme-wrapper.drgn-dark {
-    background-color: map-get($themes, dark, bg-color);
-    color: map-get($themes, dark, text-color);
-}
+@each $themeName, $theme in $themes {
+    .theme-wrapper.drgn-#{$themeName} {
+        background-color: map-get($theme, bg-color);
+        color: map-get($theme, text-color);
+    }
 
-.theme-wrapper.drgn-light {
-    background-color: map-get($themes, light, bg-color);
-    color: map-get($themes, light, text-color);
-}
+    .drgn-#{$themeName} {
+        @include themify($theme);
+    }
 
-.theme-wrapper.drgn-faded {
-    background-color: map-get($themes, faded, bg-color);
-    color: map-get($themes, faded, text-color);
-}
-
-.drgn-light {
-    @include themify(light);
-}
-
-.drgn-dark {
-    @include themify(dark);
-}
-
-.drgn-faded {
-    @include themify(faded);
+    .drgn-theme-option-#{$themeName} {
+        background-color: map-get($theme, bg-color);
+        color: map-get($theme, text-color);
+    }
 }
