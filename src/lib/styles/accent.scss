@@ -1,20 +1,20 @@
 $dropshadow: 8px 8px 0px 0px;
 
 $colors: (
-    black: #000000,
-    red: #ff4043,
-    orange: #ff732d,
-    peachy: #ff9c63,
-    yellow: #ffff31,
-    lime: #a0ff41,
-    green: #3ad96f,
-    teal: #1ac7c4,
-    sky: #66a7ff,
-    blue: #2574ff,
-    purple: #b656fd,
-    magenta: #ff43c6,
-    pink: #ff83b3,
-    white: #ffffff
+    "black": #000000,
+    "red": #ff4043,
+    "orange": #ff732d,
+    "peachy": #ff9c63,
+    "yellow": #ffff31,
+    "lime": #a0ff41,
+    "green": #3ad96f,
+    "teal": #1ac7c4,
+    "sky": #66a7ff,
+    "blue": #2574ff,
+    "purple": #b656fd,
+    "magenta": #ff43c6,
+    "pink": #ff83b3,
+    "white": #ffffff
 );
 
 @mixin change-color($color) {
@@ -38,10 +38,10 @@ $colors: (
 
 // from this codepen https://codepen.io/davidhalford/pen/ALrbEP
 @mixin text-contrast($n) { 
-    $color-brightness: round((red($n) * 299) + (green($n) * 587) + (blue($n) * 114) / 1000);
-    $light-color: round((red(#ffffff) * 299) + (green(#ffffff) * 587) + (blue(#ffffff) * 114) / 1000);
+    $color-brightness: round(calc((red($n) * 299) + (green($n) * 587) + (blue($n) * 114) / 1000));
+    $light-color: round(calc((red(#ffffff) * 299) + (green(#ffffff) * 587) + (blue(#ffffff) * 114) / 1000));
     
-    @if abs($color-brightness) < ($light-color/2){
+    @if abs($color-brightness) < (calc($light-color/2)){
       color: white;
     }
   
