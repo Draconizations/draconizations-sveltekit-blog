@@ -2,7 +2,6 @@ export const get = async () => {
     const postModules = import.meta.globEager('../../posts/*.md');
 
     const allPosts = Object.entries(postModules).map(([key, value]) => {
-        const path = key.slice(2, -3);
         const contents = value.default.render();
         const meta = value.metadata;
 
