@@ -3,9 +3,9 @@
 </script>
 
 <section class="center d-block margin-top">
-    <img class="thumbnail" alt="introduction avatar" src={ANOMALY}>
+    <!-- <img class="thumbnail" alt="introduction avatar" src={ANOMALY}> -->
     <h1>Welcome!</h1>
-    <p>My name is Jake. I'm a student in software development who likes to create things that help people in some shape or form.</p>
+    <p>My name is Jake. I'm a 19 year old nerd who enjoys a wide variety of things, but is going into software as a career (hopefully).</p>
 </section>
 
 <section class="gapped">
@@ -20,7 +20,7 @@
         </ul>
         <p>The main project I work on right now is <a href="https://dash.pluralkit.me">the dashboard for the discord bot PluralKit</a>.
         I have a couple of side-projects as well, but who knows if they'll ever see the light of day.</p>
-        <p>This is my personal/development-talk related blog!</p>
+        <p>This is just my personal hole where I can post whatever I please. Don't expect this to be all development talk.</p>
     </div>
 </section>
 

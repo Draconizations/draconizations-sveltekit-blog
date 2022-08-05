@@ -1,24 +1,15 @@
 ## Hi, I'm Jake!
 
-🏳️‍⚧️ *he/xe/it pronouns*
+🏳️‍⚧️ *he/xe/it pronouns* · [dev info](/pages/tech)
 ***
-I'm currently a student in software development. I'm based in Europe (the Netherlands) and I'm 19 years old.
 
- Most of my experience is in frontend webdev right now, but I'm aiming to learn more about backend and non-webdev as well!
+I'm 19 years old, lgbt+, and 80+ dragons in a trenchcoat.
 
-### Stuff I like working on:
-- web development
-- minecraft mods (total rookie at this still)
-- discord bots (...rarely)
+**I'm not particularly well versed in social media** and I tend to abandon most of my socials at times. The only social media I'm consistently active on is discord, and I don't tend to give my discord out to strangers. Even self hosted social media like mastodon is difficult for me, unless it's a very small group for only a couple of people.
+
+**Some of my interests are**
+- webdev, software in general
+- gamedev
 - digital art
-- anything else that piques my interest
-***
-### Things that I can do
-I currently am decent at javascript/typescript, some frontend frameworks (react, svelte) and I have some experience in C#.
-
-### Things that I'm learning atm!
-Currently getting my hands dirty with java, rust and php. I'd like to know a lot of languages eventually!
-***
-### Projects I've worked on
-- [PluralKit's dashboard](https://dash.pluralkit.me)
-- more stuff coming... at one point
+- yelling about twitter politics from a distance
+- a lot of STEM fields, yell at me about macrobiology or space for example
