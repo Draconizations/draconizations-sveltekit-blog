@@ -4,7 +4,6 @@ $colors: (
     "black": #000000,
     "red": #ff4043,
     "orange": #ff732d,
-    "peachy": #ff9c63,
     "peachy": #ffb753,
     "yellow": #ffff31,
     "lime": #a0ff41,
@@ -35,6 +34,11 @@ $colors: (
         background: $color;
         @include text-contrast($color);
     }
+
+    ::selection {
+        @include text-contrast($color);
+        background: $color;
+      }
 }
 
 // from this codepen https://codepen.io/davidhalford/pen/ALrbEP
