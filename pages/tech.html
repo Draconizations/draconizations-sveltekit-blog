@@ -2,18 +2,17 @@
 <html lang="en">
 	<head>
 		<title>Fulmine</title>
-		<link rel="icon" href="../../favicon.png"/>
+		<link rel="icon" href="../favicon.png"/>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<meta http-equiv="content-security-policy" content="">
 	<link rel="stylesheet" href="/_app/immutable/assets/pages/__layout.svelte-3c5f044f.css">
-	<link rel="stylesheet" href="/_app/immutable/assets/PageList-2d59f840.css">
 	<link rel="modulepreload" href="/_app/immutable/start-34527b08.js">
 	<link rel="modulepreload" href="/_app/immutable/chunks/index-bd916d18.js">
 	<link rel="modulepreload" href="/_app/immutable/chunks/index-cc95c177.js">
 	<link rel="modulepreload" href="/_app/immutable/pages/__layout.svelte-8b141d8c.js">
-	<link rel="modulepreload" href="/_app/immutable/pages/posts/tag/_tag_.svelte-7f941484.js">
-	<link rel="modulepreload" href="/_app/immutable/chunks/PageList-5d4522a2.js">
+	<link rel="modulepreload" href="/_app/immutable/pages/pages/__layout.svelte-47bf9951.js">
+	<link rel="modulepreload" href="/_app/immutable/pages/pages/tech.md-a7a3dad4.js">
 	</head>
 	<body>
 		<div id="sveltekit-body">
@@ -28,18 +27,23 @@
                 <li><a href="/pages/contact">Contact</a></li></ul></nav></div>
 </header>
 
-        <main><section class="center"><h2>Posts tagged #meta</h2>
-
-  <a href="/posts/tag">Back to tag catalog</a>
-
-  </section>
-
-<section class="gapped"><div class="block dropshadow"><h3 class="svelte-viazfp"><a class="title" href="/posts/2022-07-08-it-lives">🔗 IT LIVES!</a></h3>
-    <span class="italic">Posted on: 2022-07-08</span>
-    <hr>
-    <!-- HTML_TAG_START -->After two hours of intense pain, I FINALLY managed to get the site online. Now writing blog posts should be easy, I hope.
-Just to give you all a taste of my struggles, as well as some tips to get sveltekit working with...<!-- HTML_TAG_END -->
-</div></section></main>
+        <main><section class="gapped margins"><div class="block dropshadow"><h2>Development, Code, and Tech</h2>
+<p>I’m currently a student in software development.</p>
+<p>Most of my experience is in frontend webdev right now, but I’m aiming to learn more about backend and non-webdev as well!</p>
+<h3>Stuff I like working on:</h3>
+<ul><li>web development</li>
+<li>minecraft mods (total rookie at this still)</li>
+<li>discord bots (…rarely)</li>
+<li>anything else that piques my interest</li></ul>
+<hr>
+<h3>Things that I can do</h3>
+<p>I currently am decent at javascript/typescript, some frontend frameworks (react, svelte) and I have some experience in C#.</p>
+<h3>Things that I’m learning atm!</h3>
+<p>Currently getting my hands dirty with java, rust and php.</p>
+<hr>
+<h3>Projects I’ve worked on</h3>
+<ul><li><a href="https://dash.pluralkit.me" rel="nofollow">PluralKit’s dashboard</a></li>
+<li>more stuff coming… soon™️.</li></ul></div></section></main>
         <br>
         <footer class="svelte-oxz3xx"><span>🌀🫐</span>
 
@@ -50,10 +54,10 @@ Just to give you all a taste of my struggles, as well as some tips to get svelte
 </footer></div></div>
 
 
-		<script type="module" data-sveltekit-hydrate="tmfkdj">
+		<script type="module" data-sveltekit-hydrate="191sosw">
 		import { start } from "/_app/immutable/start-34527b08.js";
 		start({
-			target: document.querySelector('[data-sveltekit-hydrate="tmfkdj"]').parentNode,
+			target: document.querySelector('[data-sveltekit-hydrate="191sosw"]').parentNode,
 			paths: {"base":"","assets":""},
 			session: {},
 			route: true,
@@ -62,11 +66,11 @@ Just to give you all a taste of my struggles, as well as some tips to get svelte
 			hydrate: {
 				status: 200,
 				error: null,
-				nodes: [0, 11],
-				params: {tag:"meta"},
-				routeId: "posts/tag/[tag]"
+				nodes: [0, 2, 6],
+				params: {},
+				routeId: "pages/tech"
 			}
 		});
-	</script><script type="application/json" sveltekit:data-type="data" sveltekit:data-url="/api/posts.json">{"status":200,"statusText":"","headers":{"content-type":"application/json; charset=utf-8"},"body":"[{\"path\":\"/posts/2022-07-08-it-lives\",\"contents\":{\"html\":\"\u003Cp>After two hours of intense pain, I FINALLY managed to get the site online. Now writing blog posts should be easy, I hope.\u003C/p>\\n\u003Cp>Just to give you all a taste of my struggles, as well as some tips to get sveltekit working with the \u003Ccode>gh-pages\u003C/code> npm module, I’ll lay out some details below:\u003C/p>\\n\u003Cul>\u003Cli>don’t forget the .nojekyll file. It breaks a lot of stuff\u003C/li>\\n\u003Cli>don’t try to change the build directory to \u003Ccode>./build\u003C/code>, even though that is the default, it breaks even more stuff somehow (aka leaves the build directory empty other than the favicon).\u003C/li>\\n\u003Cli>don’t forget the CNAME file as well, unless you want to manually edit that in every time you publish your website.\u003C/li>\\n\u003Cli>and finally, CHECK what you’re publishing before you publish it, I had to delete the \u003Ccode>gh-pages\u003C/code> branch because I pushed my file system paths, including my deadname, on there multiple times!\u003C/li>\u003C/ul>\\n\u003Cp>But, oh well, I managed to get here. Future blog posts on the way!\u003C/p>\",\"css\":{\"code\":\"\",\"map\":null},\"head\":\"\"},\"meta\":{\"title\":\"IT LIVES!\",\"path\":\"2022-07-08-it-lives\",\"date\":\"2022-07-08\",\"tags\":[\"meta\"]}}]"}</script></div>
+	</script></div>
 	</body>
 </html>
