@@ -1,24 +1,11 @@
-<script context="module">
-    // @ts-ignore
-    export const load = async ({ fetch }) => {
-      const posts = await fetch('/api/posts.json')
-      const allPosts = await posts.json()
-    
-      return {
-        props: {
-          posts: allPosts
-        }
-      }
-    }
-</script>
-
 <script lang="ts">
     import { page } from '$app/stores';
-    import ShortPost from '$lib/components/ShortPost.svelte';
     import Pagination from '$lib/components/Pagination.svelte';
     import { itemsPerPage } from '$lib/utils/postUtils';
 
     import PageList from '$lib/components/PageList.svelte';
+    
+    export let data;
 
     let currentPage: number;
     let path = '/posts';
@@ -30,14 +17,12 @@
       currentPage = 1;
     }
 
-    export let posts: any;
-
     $: indexOfLastItem = currentPage * itemsPerPage;
     $: indexOfFirstItem = indexOfLastItem - itemsPerPage;
 
-    $: amountOfPages = Math.ceil(posts.length / itemsPerPage);
+    $: amountOfPages = Math.ceil(data.posts.length / itemsPerPage);
 
-    $: slicedList = posts.slice(indexOfFirstItem, indexOfLastItem);
+    $: slicedList = data.posts.slice(indexOfFirstItem, indexOfLastItem);
 </script>
 
 <section class="center" >
