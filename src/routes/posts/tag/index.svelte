@@ -20,7 +20,7 @@
 </script>
 
 <script lang="ts">
-    import Tag from '$lib/components/tag.svelte';
+    import Tag from '$lib/components/Tag.svelte';
 
     export let tags: string[];
 </script>
