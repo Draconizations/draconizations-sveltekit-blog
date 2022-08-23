@@ -1,22 +1,7 @@
-<script context="module">
-    // @ts-ignore
-    export const load = async ({ params, fetch }) => {
-      const currentTag = params.tag
-      const response = await fetch('/api/posts.json')
-      const posts = await response.json()
-  
-      const matchingPosts = posts.filter(post => post.meta.tags ? post.meta.tags.includes(currentTag) : false)
-  
-      return {
-        props: {
-          posts: matchingPosts,
-          tag: currentTag
-        }
-      }
-    }
-  </script>
   
   <script lang="ts">
+  throw new Error("@migration task: Add data prop (https://github.com/sveltejs/kit/discussions/5774#discussioncomment-3292707)");
+
     import { page } from '$app/stores';
     import PageList from '$lib/components/PageList.svelte';
     import Pagination from '$lib/components/Pagination.svelte';
