@@ -1,9 +1,7 @@
 <script lang="ts">
-    throw new Error("@migration task: Add data prop (https://github.com/sveltejs/kit/discussions/5774#discussioncomment-3292707)");
-
     import Tag from '$lib/components/Tag.svelte';
 
-    export let tags: string[];
+    export let data: any;
 </script>
 
 <section class="center">
@@ -13,9 +11,9 @@
 </section>
 
 <section class="block dropshadow">
-    {#if tags.length > 0}
+    {#if data.tags.length > 0}
         <ul class="tags">
-            {#each tags as tag}
+            {#each data.tags as tag}
                 <Tag {tag}/>
             {/each}
         </ul>

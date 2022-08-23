@@ -1,15 +1,12 @@
 <script lang="ts">
-  throw new Error("@migration task: Add data prop (https://github.com/sveltejs/kit/discussions/5774#discussioncomment-3292707)");
-
   import Tag from '$lib/components/Tag.svelte';
 
-  export let posts;
-  export let path;
+  export let data: any;
 </script>
 
-{#if posts.length}
+{#if data.posts.length}
 <div class="gapped">
-  {#each posts as post, index}
+  {#each data.posts as post, index}
     <div class="gapped margins">
       <section class="block dropshadow">
         <h2>{post.meta.title}</h2>
@@ -32,7 +29,7 @@
   </div>
 {:else}
 <section class="block dropshadow">
-  post {path} doesn't exist!
+  post {data.path} doesn't exist!
 </section>
 {/if}
 

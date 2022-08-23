@@ -1,13 +1,11 @@
 <script lang="ts">
-    throw new Error("@migration task: Add data prop (https://github.com/sveltejs/kit/discussions/5774#discussioncomment-3292707)");
-
     import { page } from '$app/stores';
     import Pagination from '$lib/components/Pagination.svelte';
     import { itemsPerPage } from '$lib/utils/postUtils';
 
     import PageList from '$lib/components/PageList.svelte';
     
-    export let posts: any;
+    export let data;
 
     let currentPage: number;
     let path = '/posts';
@@ -22,9 +20,9 @@
     $: indexOfLastItem = currentPage * itemsPerPage;
     $: indexOfFirstItem = indexOfLastItem - itemsPerPage;
 
-    $: amountOfPages = Math.ceil(posts.length / itemsPerPage);
+    $: amountOfPages = Math.ceil(data.posts.length / itemsPerPage);
 
-    $: slicedList = posts.slice(indexOfFirstItem, indexOfLastItem);
+    $: slicedList = data.posts.slice(indexOfFirstItem, indexOfLastItem);
 </script>
 
 <section class="center" >
