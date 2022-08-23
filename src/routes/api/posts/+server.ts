@@ -1,7 +1,9 @@
-export const get = async () => {
-    const postModules = import.meta.globEager('../../posts/*.md');
+import { json } from "@sveltejs/kit";
 
-    const allPosts = Object.entries(postModules).map(([key, value]) => {
+export const GET = async () => {
+    const postModules = import.meta.glob('../../../posts/*.md', {eager: true});
+
+    const allPosts = Object.entries(postModules).map(([key, value]: any) => {
         const contents = value.default.render();
         const meta = value.metadata;
 
@@ -16,8 +18,5 @@ export const get = async () => {
         return new Date(b.meta.date).getTime() - new Date(a.meta.date).getTime();
     });
 
-    return {
-        status: 200,
-        body: sortedPosts
-    }
+    return json(sortedPosts);
 }

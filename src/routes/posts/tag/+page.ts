@@ -1,6 +1,6 @@
 // @ts-ignore
 export const load = async ({ params, fetch }) => {
-    const response = await fetch('/api/posts.json');
+    const response = await fetch('/api/posts');
     const posts = await response.json();
 
     let tagList: string[] = [];
