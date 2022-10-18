@@ -5,7 +5,7 @@
 <section class="center d-block margin-top">
     <!-- <img class="thumbnail" alt="introduction avatar" src={ANOMALY}> -->
     <h1>Welcome!</h1>
-    <p>My name is Jake. I'm a 19 year old nerd who enjoys a wide variety of things, but is going into software as a career (hopefully).</p>
+    <p>My name is Jake. I'm a 20 year old nerd who enjoys a wide variety of things, but is going into software as a career (hopefully).</p>
 </section>
 
 <section class="gapped">
