@@ -1,31 +1,12 @@
-<script context="module">
-  // @ts-ignore
-  export const load = async ({ params, fetch }) => {
-    const currentPath = params.post
-    const response = await fetch('/api/posts.json')
-    const posts = await response.json()
-
-    const matchingPosts = posts.filter(post => post.meta.path ? post.meta.path == currentPath : false)
-
-    return {
-      props: {
-        posts: matchingPosts,
-        path: currentPath
-      }
-    }
-  }
-</script>
-
 <script lang="ts">
-  import Tag from '$lib/components/tag.svelte';
+  import Tag from '$lib/components/Tag.svelte';
 
-  export let posts;
-  export let path;
+  export let data: any;
 </script>
 
-{#if posts.length}
+{#if data.posts.length}
 <div class="gapped">
-  {#each posts as post, index}
+  {#each data.posts as post, index}
     <div class="gapped margins">
       <section class="block dropshadow">
         <h2>{post.meta.title}</h2>
@@ -48,7 +29,7 @@
   </div>
 {:else}
 <section class="block dropshadow">
-  post {path} doesn't exist!
+  post {data.path} doesn't exist!
 </section>
 {/if}
 
