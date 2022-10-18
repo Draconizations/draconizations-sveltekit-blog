@@ -1,1 +1,0 @@
-const n=async({params:r,fetch:e})=>{const s=await(await e("/api/posts")).json();let t=[];return s.forEach(a=>{a.meta.tags&&a.meta.tags.forEach(o=>t.push(o))}),t=[...new Set(t)],{tags:t}},c=Object.freeze(Object.defineProperty({__proto__:null,load:n},Symbol.toStringTag,{value:"Module"}));export{c as _,n as l};

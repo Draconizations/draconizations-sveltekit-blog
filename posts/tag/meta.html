@@ -6,18 +6,14 @@
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<meta http-equiv="content-security-policy" content="">
-	<link href="../../_app/immutable/assets/+layout-03d29e10.css" rel="stylesheet">
-	<link href="../../_app/immutable/assets/PageList-bf615ef1.css" rel="stylesheet">
-	<link rel="modulepreload" href="../../_app/immutable/start-726f0cf9.js">
-	<link rel="modulepreload" href="../../_app/immutable/chunks/index-5ff0f165.js">
-	<link rel="modulepreload" href="../../_app/immutable/chunks/singletons-2423852c.js">
-	<link rel="modulepreload" href="../../_app/immutable/chunks/index-689d7c96.js">
-	<link rel="modulepreload" href="../../_app/immutable/components/pages/_layout.svelte-3a6446f4.js">
-	<link rel="modulepreload" href="../../_app/immutable/components/pages/posts/tag/_tag_/_page.svelte-8310b6c6.js">
-	<link rel="modulepreload" href="../../_app/immutable/chunks/stores-4367b6d9.js">
-	<link rel="modulepreload" href="../../_app/immutable/chunks/PageList-30e9e3db.js">
-	<link rel="modulepreload" href="../../_app/immutable/modules/pages/posts/tag/_tag_/_page.js-bbaacce1.js">
-	<link rel="modulepreload" href="../../_app/immutable/chunks/_page-08a85d85.js">
+	<link rel="stylesheet" href="/_app/immutable/assets/pages/__layout.svelte-3c5f044f.css">
+	<link rel="stylesheet" href="/_app/immutable/assets/PageList-2d59f840.css">
+	<link rel="modulepreload" href="/_app/immutable/start-34527b08.js">
+	<link rel="modulepreload" href="/_app/immutable/chunks/index-bd916d18.js">
+	<link rel="modulepreload" href="/_app/immutable/chunks/index-cc95c177.js">
+	<link rel="modulepreload" href="/_app/immutable/pages/__layout.svelte-8b141d8c.js">
+	<link rel="modulepreload" href="/_app/immutable/pages/posts/tag/_tag_.svelte-7f941484.js">
+	<link rel="modulepreload" href="/_app/immutable/chunks/PageList-5d4522a2.js">
 	</head>
 	<body>
 		<div id="sveltekit-body">
@@ -55,25 +51,22 @@ Just to give you all a taste of my struggles, as well as some tips to get svelte
 
 
 		<script type="module" data-sveltekit-hydrate="tmfkdj">
-		import { set_public_env, start } from "../../_app/immutable/start-726f0cf9.js";
-
-		set_public_env({});
-
+		import { start } from "/_app/immutable/start-34527b08.js";
 		start({
 			target: document.querySelector('[data-sveltekit-hydrate="tmfkdj"]').parentNode,
 			paths: {"base":"","assets":""},
+			session: {},
 			route: true,
 			spa: false,
 			trailing_slash: "never",
 			hydrate: {
 				status: 200,
 				error: null,
-				node_ids: [0, 11],
+				nodes: [0, 11],
 				params: {tag:"meta"},
 				routeId: "posts/tag/[tag]"
 			}
 		});
-	</script>
-	<script type="application/json" sveltekit:data-type="data" sveltekit:data-url="/api/posts">{"status":200,"statusText":"","headers":{"content-type":"application/json"},"body":"[{\"path\":\"/posts/2022-07-08-it-lives\",\"contents\":{\"html\":\"\u003Cp>After two hours of intense pain, I FINALLY managed to get the site online. Now writing blog posts should be easy, I hope.\u003C/p>\\n\u003Cp>Just to give you all a taste of my struggles, as well as some tips to get sveltekit working with the \u003Ccode>gh-pages\u003C/code> npm module, I’ll lay out some details below:\u003C/p>\\n\u003Cul>\u003Cli>don’t forget the .nojekyll file. It breaks a lot of stuff\u003C/li>\\n\u003Cli>don’t try to change the build directory to \u003Ccode>./build\u003C/code>, even though that is the default, it breaks even more stuff somehow (aka leaves the build directory empty other than the favicon).\u003C/li>\\n\u003Cli>don’t forget the CNAME file as well, unless you want to manually edit that in every time you publish your website.\u003C/li>\\n\u003Cli>and finally, CHECK what you’re publishing before you publish it, I had to delete the \u003Ccode>gh-pages\u003C/code> branch because I pushed my file system paths, including my deadname, on there multiple times!\u003C/li>\u003C/ul>\\n\u003Cp>But, oh well, I managed to get here. Future blog posts on the way!\u003C/p>\",\"css\":{\"code\":\"\",\"map\":null},\"head\":\"\"},\"meta\":{\"title\":\"IT LIVES!\",\"path\":\"2022-07-08-it-lives\",\"date\":\"2022-07-08\",\"tags\":[\"meta\"]}}]"}</script></div>
+	</script><script type="application/json" sveltekit:data-type="data" sveltekit:data-url="/api/posts.json">{"status":200,"statusText":"","headers":{"content-type":"application/json; charset=utf-8"},"body":"[{\"path\":\"/posts/2022-07-08-it-lives\",\"contents\":{\"html\":\"\u003Cp>After two hours of intense pain, I FINALLY managed to get the site online. Now writing blog posts should be easy, I hope.\u003C/p>\\n\u003Cp>Just to give you all a taste of my struggles, as well as some tips to get sveltekit working with the \u003Ccode>gh-pages\u003C/code> npm module, I’ll lay out some details below:\u003C/p>\\n\u003Cul>\u003Cli>don’t forget the .nojekyll file. It breaks a lot of stuff\u003C/li>\\n\u003Cli>don’t try to change the build directory to \u003Ccode>./build\u003C/code>, even though that is the default, it breaks even more stuff somehow (aka leaves the build directory empty other than the favicon).\u003C/li>\\n\u003Cli>don’t forget the CNAME file as well, unless you want to manually edit that in every time you publish your website.\u003C/li>\\n\u003Cli>and finally, CHECK what you’re publishing before you publish it, I had to delete the \u003Ccode>gh-pages\u003C/code> branch because I pushed my file system paths, including my deadname, on there multiple times!\u003C/li>\u003C/ul>\\n\u003Cp>But, oh well, I managed to get here. Future blog posts on the way!\u003C/p>\",\"css\":{\"code\":\"\",\"map\":null},\"head\":\"\"},\"meta\":{\"title\":\"IT LIVES!\",\"path\":\"2022-07-08-it-lives\",\"date\":\"2022-07-08\",\"tags\":[\"meta\"]}}]"}</script></div>
 	</body>
 </html>

@@ -1,1 +1,0 @@
-const a=async({params:o,fetch:e})=>{const t=o.post;return{posts:(await(await e("/api/posts")).json()).filter(s=>s.meta.path?s.meta.path==t:!1),path:t}},c=Object.freeze(Object.defineProperty({__proto__:null,load:a},Symbol.toStringTag,{value:"Module"}));export{c as _,a as l};
