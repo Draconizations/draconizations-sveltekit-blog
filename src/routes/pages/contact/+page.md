@@ -1,8 +1,9 @@
 ## Contact Me!
 
-The best way to reach me at the moment is [through email](mailto:jake@fulmine.xyz). I am pretty active on discord too, but I'd like to keep that to casual conversation.
+Here's a list of ways you can reach me.
 
-[Github](https://github.com/draconizations) is where most of my public projects are hosted at the moment, including this site!
-
-My [twitter](https://twitter.com/fxlmine) is not that active, so don't try to reach me on there.
+- Best way: [email](mailto:jake@fulmine.xyz).
+- Git forges: [Github](https://github.com/draconizations) and [Codeberg](https://codeberg.org/fulmine)
+    - Codeberg is a WIP, and hosts mostly personal stuff.
+- Fediverse (mastodon): [@fulmine@tech.lgbt](https://tech.lgbt/@fulmine)
 

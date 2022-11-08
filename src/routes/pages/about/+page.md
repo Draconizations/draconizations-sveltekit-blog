@@ -1,14 +1,14 @@
 ## Hi, I'm Jake!
 
-🏳️‍⚧️ *he/xe/it pronouns* · [dev info](/pages/tech)
+🏳️‍⚧️ *he/xe/they pronouns* · [tech info](/pages/tech)
 ***
 
-I'm 20 years old, lgbt+, and 80+ dragons in a trenchcoat.
+I'm 20 years old, lgbt+, and 90+ dragons in a trenchcoat.
 
-**I'm not particularly well versed in social media** and I tend to abandon most of my socials at times. The only social media I'm consistently active on is discord, and I don't tend to give my discord out to strangers. Even self hosted social media like mastodon is difficult for me, unless it's a very small group for only a couple of people.
+**I'm not particularly well versed in social media**, I only tend to be active on discord and the fediverse.
 
 **Some of my interests are**
-- webdev, software in general
+- webdev, [software in general](/pages/tech)
 - gamedev
 - digital art
 - yelling about twitter politics from a distance
