@@ -7,9 +7,9 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<meta http-equiv="content-security-policy" content="">
 	<link href="../_app/immutable/assets/+layout-03d29e10.css" rel="stylesheet">
-	<link rel="modulepreload" href="../_app/immutable/start-3908db96.js">
+	<link rel="modulepreload" href="../_app/immutable/start-521b2919.js">
 	<link rel="modulepreload" href="../_app/immutable/chunks/index-5ff0f165.js">
-	<link rel="modulepreload" href="../_app/immutable/chunks/singletons-3e567f64.js">
+	<link rel="modulepreload" href="../_app/immutable/chunks/singletons-57376998.js">
 	<link rel="modulepreload" href="../_app/immutable/chunks/index-689d7c96.js">
 	<link rel="modulepreload" href="../_app/immutable/components/pages/_layout.svelte-89acbbcc.js">
 	<link rel="modulepreload" href="../_app/immutable/components/pages/posts/tag/_page.svelte-a4471c01.js">
@@ -34,7 +34,7 @@
 
     <a href="/posts">Back to all posts</a></section>
 
-<section class="block dropshadow"><ul class="tags"><li><a class="tag-text" href="/posts/tag/meta">#meta</a></li></ul></section></main>
+<section class="block dropshadow"><ul class="tags"><li><a class="tag-text" href="/posts/tag/meta">#meta</a></li><li><a class="tag-text" href="/posts/tag/personal">#personal</a></li></ul></section></main>
         <br>
         <footer class="svelte-oxz3xx"><span>🌀🫐</span>
 
@@ -45,13 +45,13 @@
 </footer></div></div>
 
 
-		<script type="module" data-sveltekit-hydrate="1ipn219">
-		import { set_public_env, start } from "../_app/immutable/start-3908db96.js";
+		<script type="module" data-sveltekit-hydrate="wp8not">
+		import { set_public_env, start } from "../_app/immutable/start-521b2919.js";
 
 		set_public_env({});
 
 		start({
-			target: document.querySelector('[data-sveltekit-hydrate="1ipn219"]').parentNode,
+			target: document.querySelector('[data-sveltekit-hydrate="wp8not"]').parentNode,
 			paths: {"base":"","assets":""},
 			route: true,
 			spa: false,
@@ -65,6 +65,6 @@
 			}
 		});
 	</script>
-	<script type="application/json" sveltekit:data-type="data" sveltekit:data-url="/api/posts">{"status":200,"statusText":"","headers":{"content-type":"application/json"},"body":"[{\"path\":\"/posts/2022-07-08-it-lives\",\"contents\":{\"html\":\"\u003Cp>After two hours of intense pain, I FINALLY managed to get the site online. Now writing blog posts should be easy, I hope.\u003C/p>\\n\u003Cp>Just to give you all a taste of my struggles, as well as some tips to get sveltekit working with the \u003Ccode>gh-pages\u003C/code> npm module, I’ll lay out some details below:\u003C/p>\\n\u003Cul>\u003Cli>don’t forget the .nojekyll file. It breaks a lot of stuff\u003C/li>\\n\u003Cli>don’t try to change the build directory to \u003Ccode>./build\u003C/code>, even though that is the default, it breaks even more stuff somehow (aka leaves the build directory empty other than the favicon).\u003C/li>\\n\u003Cli>don’t forget the CNAME file as well, unless you want to manually edit that in every time you publish your website.\u003C/li>\\n\u003Cli>and finally, CHECK what you’re publishing before you publish it, I had to delete the \u003Ccode>gh-pages\u003C/code> branch because I pushed my file system paths, including my deadname, on there multiple times!\u003C/li>\u003C/ul>\\n\u003Cp>But, oh well, I managed to get here. Future blog posts on the way!\u003C/p>\",\"css\":{\"code\":\"\",\"map\":null},\"head\":\"\"},\"meta\":{\"title\":\"IT LIVES!\",\"path\":\"2022-07-08-it-lives\",\"date\":\"2022-07-08\",\"tags\":[\"meta\"]}}]"}</script></div>
+	<script type="application/json" sveltekit:data-type="data" sveltekit:data-url="/api/posts">{"status":200,"statusText":"","headers":{"content-type":"application/json"},"body":"[{\"path\":\"/posts/2022-11-08-updates-galore\",\"contents\":{\"html\":\"\u003Cp>It’s been a while since I last made a post on here. The reason why? I didn’t really feel the need to. But now that it’s been exactly 4 months, I think a (short) update is due.\u003C/p>\\n\u003Ch3>Bring on the updates\u003C/h3>\\n\u003Cul>\u003Cli>\u003Cp>A lot of the content on this website got an overhaul. I’ve updated my contact page, my about me, my age, my development skills page. Basically everything that involves words.\u003C/p>\u003C/li>\\n\u003Cli>\u003Cp>I’m more active on the fediverse than I am on twitter right now, which isn’t surprising considering the Great Muskrat Takeover of 2022. I never really was too active on twitter to begin with, but fedi’s atmosphere is nicer in general. Find me over at \u003Ca href=\\\"https://tech.lgbt/@fulmine\\\" rel=\\\"nofollow\\\">@fulmine@tech.lgbt\u003C/a>!\u003C/p>\u003C/li>\\n\u003Cli>\u003Cp>In the past few months I’ve been picking up running my own servers. Still in the cloud (for now), but it’s been nice setting up my own projects on an actual server through ssh. In the past I’ve only deployed static sites. Unfortunately, I don’t really have anything here that I can show off, but there might be something in the future.\u003C/p>\u003C/li>\\n\u003Cli>\u003Cp>I’ve been very slowly chipping away at a project called \u003Ca href=\\\"https://profilebuilder.fulmine.xyz\\\" rel=\\\"nofollow\\\">profilebuilder\u003C/a>. Which lets you create fake discord profiles for yourself. It’s a heavy work in progress and there’s only a small amount of features as of now, but you’ll be able to create a full profile with an about me and spotify song in the future ✨\u003C/p>\u003C/li>\u003C/ul>\\n\u003Cp>That’s it for now, I have important businesses to attend to (which means that I’m writing this in the middle of class and I should get back to my schoolwork). Goodbye everyone and have a nice one.\u003C/p>\",\"css\":{\"code\":\"\",\"map\":null},\"head\":\"\"},\"meta\":{\"title\":\"Updates Galore\",\"path\":\"2022-11-08-updates-galore\",\"date\":\"2022-11-08\",\"tags\":[\"meta\",\"personal\"]}},{\"path\":\"/posts/2022-07-08-it-lives\",\"contents\":{\"html\":\"\u003Cp>After two hours of intense pain, I FINALLY managed to get the site online. Now writing blog posts should be easy, I hope.\u003C/p>\\n\u003Cp>Just to give you all a taste of my struggles, as well as some tips to get sveltekit working with the \u003Ccode>gh-pages\u003C/code> npm module, I’ll lay out some details below:\u003C/p>\\n\u003Cul>\u003Cli>don’t forget the .nojekyll file. It breaks a lot of stuff\u003C/li>\\n\u003Cli>don’t try to change the build directory to \u003Ccode>./build\u003C/code>, even though that is the default, it breaks even more stuff somehow (aka leaves the build directory empty other than the favicon).\u003C/li>\\n\u003Cli>don’t forget the CNAME file as well, unless you want to manually edit that in every time you publish your website.\u003C/li>\\n\u003Cli>and finally, CHECK what you’re publishing before you publish it, I had to delete the \u003Ccode>gh-pages\u003C/code> branch because I pushed my file system paths, including my deadname, on there multiple times!\u003C/li>\u003C/ul>\\n\u003Cp>But, oh well, I managed to get here. Future blog posts on the way!\u003C/p>\",\"css\":{\"code\":\"\",\"map\":null},\"head\":\"\"},\"meta\":{\"title\":\"IT LIVES!\",\"path\":\"2022-07-08-it-lives\",\"date\":\"2022-07-08\",\"tags\":[\"meta\"]}}]"}</script></div>
 	</body>
 </html>

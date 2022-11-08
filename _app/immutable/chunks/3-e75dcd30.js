@@ -1,1 +1,0 @@
-import{default as m}from"../components/pages/_page.svelte-58867b49.js";import"./index-5ff0f165.js";export{m as component};
